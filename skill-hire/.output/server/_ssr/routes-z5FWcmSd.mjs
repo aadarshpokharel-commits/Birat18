@@ -1,0 +1,325 @@
+import { o as __toESM } from "../_runtime.mjs";
+import { u as require_react } from "../_libs/@floating-ui/react-dom+[...].mjs";
+import { s as require_jsx_runtime } from "../_libs/@radix-ui/react-arrow+[...].mjs";
+import { t as Button } from "./use-auth-D1Km7QHf.mjs";
+import { g as useNavigate, h as Link } from "../_libs/@tanstack/react-router+[...].mjs";
+import { J as BadgeCheck, K as CalendarCheck, S as MessageSquare, Y as ArrowRight, h as Shield, l as Star, u as Sparkles, v as Search } from "../_libs/lucide-react.mjs";
+import { n as Navbar, t as Footer } from "./footer-9RcEM18P.mjs";
+import { i as workers, n as stats, r as testimonials, t as categories } from "./mock-data-BixlXd30.mjs";
+import { t as Card } from "./card-Cm76wao2.mjs";
+import { t as Input } from "./input-2WgE2uAN.mjs";
+import { t as WorkerCard } from "./worker-card-Lhj4cowl.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/routes-z5FWcmSd.js
+var import_react = /* @__PURE__ */ __toESM(require_react());
+var import_jsx_runtime = require_jsx_runtime();
+var hero_default = "/assets/hero-DNtaLySj.jpg";
+function Landing() {
+	const [q, setQ] = (0, import_react.useState)("");
+	const navigate = useNavigate();
+	const featured = workers.filter((w) => w.rating >= 4.7).slice(0, 8);
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+		className: "flex min-h-screen flex-col bg-background",
+		children: [
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Navbar, {}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("main", { children: [
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
+					className: "gradient-hero relative overflow-hidden",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "mx-auto grid max-w-7xl gap-10 px-4 pb-16 pt-14 sm:px-6 lg:grid-cols-2 lg:gap-6 lg:px-8 lg:pb-24 lg:pt-20",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "flex flex-col justify-center",
+							children: [
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+									className: "inline-flex w-fit items-center gap-2 rounded-full border bg-background px-3 py-1 text-xs font-medium shadow-soft",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Sparkles, { className: "h-3.5 w-3.5 text-primary" }), "Trusted by 180K+ households"]
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h1", {
+									className: "mt-5 font-display text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl",
+									children: [
+										"Hire verified ",
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+											className: "text-gradient",
+											children: "local pros"
+										}),
+										" in minutes."
+									]
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+									className: "mt-5 max-w-lg text-lg text-muted-foreground",
+									children: "From plumbing emergencies to weekend deep-cleans, SkillHire brings background-checked workers to your doorstep — with transparent pricing and instant chat."
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("form", {
+									onSubmit: (e) => {
+										e.preventDefault();
+										navigate({
+											to: "/search",
+											search: { q }
+										});
+									},
+									className: "mt-8 flex flex-col gap-2 rounded-2xl border bg-card p-2 shadow-elevated sm:flex-row",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										className: "flex flex-1 items-center gap-2 px-3",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Search, { className: "h-4 w-4 text-muted-foreground" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Input, {
+											value: q,
+											onChange: (e) => setQ(e.target.value),
+											placeholder: "Try 'electrician near me' or 'AC service'",
+											className: "border-0 shadow-none focus-visible:ring-0"
+										})]
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Button, {
+										type: "submit",
+										size: "lg",
+										className: "shrink-0",
+										children: ["Search", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "ml-1 h-4 w-4" })]
+									})]
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "mt-8 flex flex-wrap gap-x-8 gap-y-3 text-sm text-muted-foreground",
+									children: [
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+											className: "flex items-center gap-2",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BadgeCheck, { className: "h-4 w-4 text-primary" }), " ID-verified workers"]
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+											className: "flex items-center gap-2",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Shield, { className: "h-4 w-4 text-primary" }), " Service guarantee"]
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+											className: "flex items-center gap-2",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Star, { className: "h-4 w-4 text-primary" }), " 4.8 avg. rating"]
+										})
+									]
+								})
+							]
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "relative flex items-center justify-center",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute inset-0 -z-10 rounded-[3rem] bg-gradient-to-br from-primary/10 via-transparent to-primary-glow/20 blur-3xl" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
+								src: hero_default,
+								alt: "Skilled local workers ready to help",
+								width: 1600,
+								height: 1200,
+								fetchPriority: "high",
+								decoding: "async",
+								className: "w-full max-w-xl rounded-3xl"
+							})]
+						})]
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						className: "mx-auto max-w-7xl px-4 pb-12 sm:px-6 lg:px-8",
+						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+							className: "grid gap-4 rounded-2xl border bg-card p-6 shadow-soft sm:grid-cols-4",
+							children: stats.map((s) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "text-center",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+									className: "font-display text-2xl font-bold text-gradient",
+									children: s.value
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+									className: "mt-1 text-xs uppercase tracking-wider text-muted-foreground",
+									children: s.label
+								})]
+							}, s.label))
+						})
+					})]
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
+					className: "mx-auto w-full max-w-7xl px-4 py-16 sm:px-6 lg:px-8",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(SectionHead, {
+						eyebrow: "Browse services",
+						title: "Popular categories",
+						desc: "Every profession you need — one tap away.",
+						link: {
+							to: "/categories",
+							label: "See all"
+						}
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						className: "mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6",
+						children: categories.slice(0, 12).map((c) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Link, {
+							to: "/search",
+							search: { category: c.slug },
+							className: "group flex flex-col items-center gap-3 rounded-2xl border bg-card p-5 text-center transition-all hover:-translate-y-1 hover:shadow-elevated",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+								className: "grid h-12 w-12 place-items-center rounded-2xl text-white shadow-soft transition-transform group-hover:scale-110",
+								style: { backgroundColor: c.color },
+								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(c.icon, { className: "h-5 w-5" })
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+								className: "text-sm font-semibold",
+								children: c.name
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "text-xs text-muted-foreground",
+								children: [c.workers, " pros"]
+							})] })]
+						}, c.slug))
+					})]
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
+					className: "bg-surface py-16",
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "mx-auto max-w-7xl px-4 sm:px-6 lg:px-8",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(SectionHead, {
+							eyebrow: "Top rated",
+							title: "Featured professionals",
+							desc: "Our highest-rated workers, ready to book.",
+							link: {
+								to: "/search",
+								label: "Browse all"
+							}
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+							className: "mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4",
+							children: featured.map((w) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(WorkerCard, { worker: w }, w.id))
+						})]
+					})
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
+					className: "mx-auto w-full max-w-7xl px-4 py-20 sm:px-6 lg:px-8",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(SectionHead, {
+						eyebrow: "How it works",
+						title: "Book help in three steps",
+						desc: "Simple, safe, and quick."
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						className: "mt-10 grid gap-6 md:grid-cols-3",
+						children: [
+							{
+								icon: Search,
+								title: "Search & compare",
+								desc: "Filter by category, price, ratings, and availability."
+							},
+							{
+								icon: CalendarCheck,
+								title: "Book instantly",
+								desc: "Pick a date, time, and share your address."
+							},
+							{
+								icon: MessageSquare,
+								title: "Chat & complete",
+								desc: "Coordinate in-app, then rate your worker."
+							}
+						].map((step, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Card, {
+							className: "relative p-6 shadow-soft",
+							children: [
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+									className: "absolute -top-3 left-6 grid h-7 w-7 place-items-center rounded-full gradient-primary text-xs font-bold text-primary-foreground",
+									children: i + 1
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)(step.icon, { className: "h-8 w-8 text-primary" }),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+									className: "mt-4 font-display text-lg font-bold",
+									children: step.title
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+									className: "mt-2 text-sm text-muted-foreground",
+									children: step.desc
+								})
+							]
+						}, step.title))
+					})]
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
+					className: "bg-surface py-20",
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "mx-auto max-w-7xl px-4 sm:px-6 lg:px-8",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(SectionHead, {
+							eyebrow: "Loved by customers",
+							title: "What people say"
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+							className: "mt-10 grid gap-6 md:grid-cols-3",
+							children: testimonials.map((t) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Card, {
+								className: "p-6 shadow-soft",
+								children: [
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+										className: "flex gap-0.5 text-warning",
+										children: Array.from({ length: 5 }).map((_, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Star, { className: "h-4 w-4 fill-current" }, i))
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+										className: "mt-4 text-sm leading-relaxed",
+										children: [
+											"\"",
+											t.text,
+											"\""
+										]
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										className: "mt-6 flex items-center gap-3",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+											className: "grid h-10 w-10 place-items-center rounded-full gradient-primary text-sm font-semibold text-primary-foreground",
+											children: t.initials
+										}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+											className: "text-sm font-semibold",
+											children: t.name
+										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+											className: "text-xs text-muted-foreground",
+											children: t.role
+										})] })]
+									})
+								]
+							}, t.name))
+						})]
+					})
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
+					className: "mx-auto w-full max-w-7xl px-4 py-20 sm:px-6 lg:px-8",
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						className: "gradient-primary relative overflow-hidden rounded-3xl px-8 py-14 text-center text-primary-foreground shadow-glow",
+						children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "mx-auto max-w-2xl",
+							children: [
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+									className: "font-display text-3xl font-bold sm:text-4xl",
+									children: "Are you a skilled professional?"
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+									className: "mt-3 text-primary-foreground/90",
+									children: "Join thousands of verified workers earning on SkillHire. Set your own hours and pricing."
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "mt-8 flex flex-wrap justify-center gap-3",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
+										asChild: true,
+										size: "lg",
+										variant: "secondary",
+										children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
+											to: "/register",
+											children: "Become a worker"
+										})
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
+										asChild: true,
+										size: "lg",
+										variant: "outline",
+										className: "border-white/40 bg-white/10 text-white hover:bg-white/20",
+										children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
+											to: "/about",
+											children: "Learn how SkillHire works"
+										})
+									})]
+								})
+							]
+						})
+					})
+				})
+			] }),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Footer, {})
+		]
+	});
+}
+function SectionHead({ eyebrow, title, desc, link }) {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+		className: "flex flex-wrap items-end justify-between gap-4",
+		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
+			eyebrow && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+				className: "text-xs font-semibold uppercase tracking-wider text-primary",
+				children: eyebrow
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+				className: "mt-1 font-display text-3xl font-bold sm:text-4xl",
+				children: title
+			}),
+			desc && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+				className: "mt-2 max-w-xl text-muted-foreground",
+				children: desc
+			})
+		] }), link && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Link, {
+			to: link.to,
+			className: "text-sm font-semibold text-primary hover:underline",
+			children: [link.label, " →"]
+		})]
+	});
+}
+//#endregion
+export { Landing as component };

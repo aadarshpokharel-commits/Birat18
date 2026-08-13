@@ -1,0 +1,1 @@
+import{t as e}from"./auth-BusrTA-X.js";var t=async t=>(await e.post(`/bookings`,t)).data,n=async t=>(await e.get(`/bookings/customer/${t}`)).data,r=async t=>(await e.get(`/bookings/worker/${t}`)).data,i=async(t,n)=>(await e.patch(`/bookings/${t}/status`,{status:n})).data;export{i,n,r,t};

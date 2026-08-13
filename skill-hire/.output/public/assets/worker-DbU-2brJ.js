@@ -1,0 +1,1 @@
+import{t as e}from"./auth-BusrTA-X.js";var t=async()=>{let{data:t}=await e.get(`/workers`);return t},n=async t=>{let{data:n}=await e.get(`/workers/${t}`);return n},r=async t=>{let{data:n}=await e.get(`/workers/user/${t}`);return n};export{r as n,t as r,n as t};

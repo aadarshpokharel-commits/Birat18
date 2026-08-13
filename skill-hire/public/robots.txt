@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /login
+Disallow: /register
+Disallow: /messages
+Disallow: /dashboard/
+
+Sitemap: https://skill-hire.lovable.app/sitemap.xml

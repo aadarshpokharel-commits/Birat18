@@ -1,0 +1,15 @@
+# SkillHire
+
+> SkillHire is a local-services marketplace that connects households and businesses with background-verified skilled workers — electricians, plumbers, cleaners, tutors, mechanics and more — across 45+ cities.
+
+## Pages
+- [Home](/): Search verified local pros, browse popular categories and featured workers.
+- [All categories](/categories): Every service category available on SkillHire.
+- [Search](/search): Filter workers by category, price, rating and availability.
+- [Plumbing services](/services/plumbing): Hire a verified plumber near you.
+- [About](/about): Mission, verification process and what makes SkillHire different.
+- [Contact](/contact): Support and feedback channels.
+
+## Optional
+- [Privacy Policy](/privacy)
+- [Terms of Service](/terms)

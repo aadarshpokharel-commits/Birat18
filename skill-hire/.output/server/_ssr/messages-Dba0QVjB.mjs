@@ -1,0 +1,131 @@
+import { o as __toESM } from "../_runtime.mjs";
+import { u as require_react } from "../_libs/@floating-ui/react-dom+[...].mjs";
+import { s as require_jsx_runtime } from "../_libs/@radix-ui/react-arrow+[...].mjs";
+import { t as Button } from "./use-auth-D1Km7QHf.mjs";
+import { _ as Send } from "../_libs/lucide-react.mjs";
+import { n as Navbar, t as Footer } from "./footer-9RcEM18P.mjs";
+import { i as workers } from "./mock-data-BixlXd30.mjs";
+import { t as Card } from "./card-Cm76wao2.mjs";
+import { t as Input } from "./input-2WgE2uAN.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/messages-Dba0QVjB.js
+var import_react = /* @__PURE__ */ __toESM(require_react());
+var import_jsx_runtime = require_jsx_runtime();
+function MessagesPage() {
+	const chats = workers.slice(0, 5);
+	const [active, setActive] = (0, import_react.useState)(chats[0].id);
+	const [messages, setMessages] = (0, import_react.useState)([
+		{
+			from: "them",
+			text: "Hi! How can I help today?",
+			time: "09:12"
+		},
+		{
+			from: "me",
+			text: "I need help fixing a leak in the kitchen sink.",
+			time: "09:14"
+		},
+		{
+			from: "them",
+			text: "Sure — I'm available tomorrow at 10am. Would that work?",
+			time: "09:15"
+		}
+	]);
+	const [input, setInput] = (0, import_react.useState)("");
+	const worker = workers.find((w) => w.id === active);
+	const send = () => {
+		if (!input.trim()) return;
+		setMessages((m) => [...m, {
+			from: "me",
+			text: input,
+			time: "now"
+		}]);
+		setInput("");
+		setTimeout(() => setMessages((m) => [...m, {
+			from: "them",
+			text: "Got it, thanks!",
+			time: "now"
+		}]), 800);
+	};
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+		className: "flex min-h-screen flex-col bg-background",
+		children: [
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Navbar, {}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				className: "mx-auto grid w-full max-w-7xl flex-1 gap-4 px-4 py-8 sm:px-6 lg:grid-cols-[300px_1fr] lg:px-8",
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Card, {
+					className: "overflow-hidden p-0",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						className: "border-b p-4 font-semibold",
+						children: "Chats"
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", { children: chats.map((w) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
+						onClick: () => setActive(w.id),
+						className: `flex w-full items-center gap-3 border-b p-3 text-left transition-colors hover:bg-secondary ${active === w.id ? "bg-secondary" : ""}`,
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+							className: "grid h-10 w-10 place-items-center rounded-full text-sm font-semibold text-white",
+							style: { backgroundColor: w.color },
+							children: w.initials
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "min-w-0 flex-1",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+								className: "truncate font-medium",
+								children: w.name
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+								className: "truncate text-xs text-muted-foreground",
+								children: w.profession
+							})]
+						})]
+					}) }, w.id)) })]
+				}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Card, {
+					className: "flex flex-col p-0",
+					children: [
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "flex items-center gap-3 border-b p-4",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+								className: "grid h-10 w-10 place-items-center rounded-full text-sm font-semibold text-white",
+								style: { backgroundColor: worker.color },
+								children: worker.initials
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+								className: "font-semibold",
+								children: worker.name
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+								className: "text-xs text-success",
+								children: "Online"
+							})] })]
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+							className: "flex-1 space-y-3 overflow-y-auto p-4",
+							children: messages.map((m, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+								className: `flex ${m.from === "me" ? "justify-end" : "justify-start"}`,
+								children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: `max-w-[75%] rounded-2xl px-4 py-2 text-sm ${m.from === "me" ? "gradient-primary text-primary-foreground" : "bg-secondary"}`,
+									children: [m.text, /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+										className: "mt-1 text-[10px] opacity-70",
+										children: m.time
+									})]
+								})
+							}, i))
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("form", {
+							onSubmit: (e) => {
+								e.preventDefault();
+								send();
+							},
+							className: "flex gap-2 border-t p-3",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Input, {
+								placeholder: "Type a message…",
+								value: input,
+								onChange: (e) => setInput(e.target.value)
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
+								type: "submit",
+								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Send, { className: "h-4 w-4" })
+							})]
+						})
+					]
+				})]
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Footer, {})
+		]
+	});
+}
+//#endregion
+export { MessagesPage as component };
